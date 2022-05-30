@@ -80,7 +80,8 @@ sleep(0.5)
 # Submits form.
 driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div[1]/div/div/div[3]/form/div/div[5]/button/div/div').click()
 
-# Now the hard part begins.
+# Put Somthing Cool Here if you want.
+# Currently the program waits for the user to complete the captcha.
 
 msgbox("Click ok after you have completed the capcha.")
 
