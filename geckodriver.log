@@ -1,0 +1,86 @@
+1653900633046	geckodriver	INFO	Listening on 127.0.0.1:59731
+1653900636115	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59732" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofileOM8sw6"
+1653900636333	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofileOM8sw6\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59732/devtools/browser/c4159ea1-5eee-4560-9a2b-353db75974a6
+1653900637564	Marionette	INFO	Listening on port 59753
+Read port: 59753
+1653900637673	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653900654984	Marionette	INFO	Stopped listening on port 59753
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1653900657266	geckodriver	INFO	Listening on 127.0.0.1:59782
+1653900660299	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59783" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofile7NBBEA"
+1653900660519	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofile7NBBEA\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59783/devtools/browser/a2607a2b-8a31-4315-a4e8-c86215be45b6
+1653900661709	Marionette	INFO	Listening on port 59803
+Read port: 59803
+1653900661830	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653900676770	Marionette	INFO	Stopped listening on port 59803
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1653900678730	geckodriver	INFO	Listening on 127.0.0.1:59832
+1653900681802	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59833" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofilefi7dAH"
+1653900682020	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofilefi7dAH\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59833/devtools/browser/84caa283-445e-4056-abab-a037eac63da0
+1653900683243	Marionette	INFO	Listening on port 59854
+Read port: 59854
+1653900683338	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653900726568	Marionette	INFO	Stopped listening on port 59854
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+remote-debugging-port" "59929" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofilez1fAYK"
+1653900724901	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofilez1fAYK\\search.json.mozlz4", (void 0)))
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+console.error: Region.jsm: "Error fetching region" (new TypeError("NetworkError when attempting to fetch resource.", ""))
+console.error: Region.jsm: "Failed to fetch region" (new Error("NO_RESULT", "resource://gre/modules/Region.jsm", 419))
+console.log: "RemoteSettingsWorker error: Error: Can't import when we've started shutting down."
+console.error: "Could not load engine google@search.mozilla.org: TypeError: AddonManagerInternal._getProviderByName(...) is undefined"
+console.error: "Could not load engine amazondotcom@search.mozilla.org: TypeError: AddonManagerInternal._getProviderByName(...) is undefined"
+console.error: "Could not load engine wikipedia@search.mozilla.org: TypeError: AddonManagerInternal._getProviderByName(...) is undefined"
+console.error: "Could not load engine bing@search.mozilla.org: TypeError: AddonManagerInternal._getProviderByName(...) is undefined"
+console.error: "Could not load engine ddg@search.mozilla.org: TypeError: AddonManagerInternal._getProviderByName(...) is undefined"
+console.error: SearchService: "Could not find a replacement default engine."
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+[Parent 18240, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 575: uncaught exception: 2147500036
+*** UTM:SVC TimerManager:registerTimer called after profile-before-change notification. Ignoring timer registration for id: region-update-timer
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+
+1653900729136	geckodriver	INFO	Listening on 127.0.0.1:59953
+1653900732195	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "59954" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofilelgasuK"
+1653900732415	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofilelgasuK\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:59954/devtools/browser/e66d2ee4-c367-47d7-b417-8583743a50b5
+1653900733564	Marionette	INFO	Listening on port 59973
+Read port: 59973
+1653900733640	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653900751178	Marionette	INFO	Stopped listening on port 59973
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+1653900752835	geckodriver	INFO	Listening on 127.0.0.1:60047
+1653900755869	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--remote-debugging-port" "60048" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofileiOcNPJ"
+1653900756091	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\lawth\\AppData\\Local\\Temp\\rust_mozprofileiOcNPJ\\search.json.mozlz4", (void 0)))
+DevTools listening on ws://localhost:60048/devtools/browser/bec40eea-2e24-40a2-acc0-77dc70babb1b
+1653900757260	Marionette	INFO	Listening on port 60068
+Read port: 60068
+1653900757314	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1653900761226	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://www.twitch.tv"
+1653900768749	Marionette	INFO	Stopped listening on port 60068
+console.warn: TopSitesFeed: Failed to fetch data from Contile server: NetworkError when attempting to fetch resource.
+
+###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost
+

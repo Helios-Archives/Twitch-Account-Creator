@@ -7,13 +7,15 @@ import string
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
 from easygui import msgbox
-
+import os, sys
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+os.chdir('..')
 
 def generate_username():
-    with open('usernames.txt', 'r') as f:
+    with open('__usernames.txt', 'r') as f:
         lines = f.readlines()
         username = random.choice(lines).strip()
-    with open('used.txt', 'r') as f:
+    with open('_usernames_used.txt', 'r') as f:
         if username in f.read():
             return generate_username()
     return username
@@ -30,15 +32,9 @@ def generate_day():
 def generate_year():
     return random.randint(1970, 2001)
 
-
-# Options
-options = Options()
-options.headless = False
-
-
 # Start firefox and install extensions
-driver = webdriver.Firefox(options=options)
-driver.install_addon("adblock.xpi")
+driver = webdriver.Firefox(executable_path='./dep/geckodriver.exe')
+driver.install_addon("./dep/adblock.xpi")
 
 # Loads webpage
 driver.get("http://www.twitch.tv/")
@@ -91,9 +87,9 @@ msgbox("Click ok after you have completed the capcha.")
 driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div/div/div/div/div/div[3]/div[2]/button').click()
 driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/div/div[3]/div[2]/button').click()
 
-with open("infolist.txt", "a") as f:
+with open("___infolist.txt", "a") as f:
     f.write(username + ":" + password + "\n")
-with open("used.txt", "a") as f:
+with open("_usernames_used.txt", "a") as f:
     f.write(username + "\n")
 
 
