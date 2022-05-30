@@ -3,11 +3,7 @@ channel = 'https://www.twitch.tv/************'
 
 
 
-# function to get the amount of lines in the file
-def get_line_count():
-    with open('___infolist.txt', 'r') as f:
-        lines = f.readlines()
-        return len(lines)
+
 
 
 
@@ -24,12 +20,13 @@ os.chdir('..')
 
 
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
-import random
-import string
-from selenium.webdriver.common.action_chains import ActionChains
-from selenium.webdriver.support.ui import Select
+
+# function to get the amount of lines in the file
+def get_line_count():
+    with open('___infolist.txt', 'r') as f:
+        lines = f.readlines()
+        return len(lines)
 
 def read_name(line):
     with open('___infolist.txt', 'r') as f:
@@ -60,7 +57,7 @@ def follow(amt):
     driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div[1]/div/div/div[3]/form/div/div[3]/button').click()
 
     # Sleeps
-    msgbox()
+    msgbox('Click OK when you see the verification code prompt.')
 
     # Clicks remind later
     driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div/div/div[3]/div[2]/button').click()

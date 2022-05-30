@@ -1,13 +1,13 @@
 from time import sleep
 from selenium import webdriver
-from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.common.by import By
 import random
 import string
-from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import Select
 from easygui import msgbox
-import os, sys
+
+
+import os
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.chdir('..')
 
@@ -83,7 +83,7 @@ driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div[1]/div/
 # Put Somthing Cool Here if you want.
 # Currently the program waits for the user to complete the captcha.
 
-msgbox("Click ok after you have completed the capcha.")
+msgbox('Click OK when you see the verification code prompt.')
 
 driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div/div/div/div/div/div[3]/div[2]/button').click()
 driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/div/div[3]/div[2]/button').click()
