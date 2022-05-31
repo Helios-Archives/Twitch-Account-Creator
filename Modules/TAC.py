@@ -86,6 +86,7 @@ while True:
     # Currently the program waits for the user to complete the captcha.
 
     while True:
+        do_quit = False
         try:
             driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div/div/div/div/div/div[2]/div[2]/div[1]/div/input')
             break
