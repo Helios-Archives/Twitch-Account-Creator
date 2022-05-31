@@ -1,5 +1,5 @@
 # Set the link to the channel to be followed
-channel = 'https://www.twitch.tv/************'
+channel = 'https://www.twitch.tv/***********'
 
 
 
@@ -18,6 +18,17 @@ from easygui import msgbox
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.chdir('..')
 
+# Creates file for alroady followed accounts
+if not os.path.exists(f'./users/{channel.split("/")[-1]}.txt'):
+    with open(f'./users/{channel.split("/")[-1]}.txt', 'w') as f:
+        f.write('')
+        followed = []
+else:
+    with open(f'./users/{channel.split("/")[-1]}.txt', 'r') as f:
+        followed_t = f.readlines()
+        followed = []
+        for x in followed_t:
+            followed.append(x.replace("\n", ""))
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -34,7 +45,11 @@ def read_name(line):
         return lines[line]
 
 def follow(amt):
-    try: info = read_name(amt)
+    try: 
+        info = read_name(amt)
+        if info.split(':')[0] in followed:
+            print('Already followed')
+            return None
     except: 
         print('No name on that line')
         return None
@@ -57,7 +72,12 @@ def follow(amt):
     driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div[1]/div/div/div[3]/form/div/div[3]/button').click()
 
     # Sleeps
-    msgbox('Click OK when you see the verification code prompt.')
+    while True:
+        try:
+            driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div/div/div[2]/div[2]/div[1]/div/input')
+            break
+        except:
+            sleep(1)
 
     # Clicks remind later
     driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div/div/div[3]/div[2]/button').click()

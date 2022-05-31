@@ -83,7 +83,12 @@ driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div[1]/div/
 # Put Somthing Cool Here if you want.
 # Currently the program waits for the user to complete the captcha.
 
-msgbox('Click OK when you see the verification code prompt.')
+while True:
+    try:
+        driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div/div/div/div/div/div[2]/div[2]/div[1]/div/input')
+        break
+    except:
+        sleep(0.1)
 
 driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div/div/div/div/div/div[3]/div[2]/button').click()
 driver.find_element(By.XPATH, '/html/body/div[5]/div/div/div[2]/div/div[3]/div[2]/button').click()
