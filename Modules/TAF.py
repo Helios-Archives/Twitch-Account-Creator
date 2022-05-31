@@ -1,5 +1,5 @@
 # Set the link to the channel to be followed
-channel = 'https://www.twitch.tv/***********'
+channel = 'https://www.twitch.tv/rusty_o7'
 
 
 
@@ -95,6 +95,9 @@ def follow(amt):
             return None
     # Sleeps
     sleep(1)
+
+    with open(f'./users/{channel.split("/")[-1]}.txt', 'a') as f:
+        f.write(info.split(':')[0] + '\n')
 
     # Exits
     driver.quit()
