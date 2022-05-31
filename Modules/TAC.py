@@ -99,3 +99,6 @@ with open("_usernames_used.txt", "a") as f:
     f.write(username + "\n")
 
 
+sleep(2)
+driver.quit
+
