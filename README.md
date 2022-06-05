@@ -3,7 +3,7 @@
 
 A set of Twitch tools for functions like Creating accounts, Following Users, and more!
 
-## Contents
+## <img src='https://raw.githubusercontent.com/Rerum-Crea/.github/main/art/Logo-Gradient-Transparant.png' alt='Rerum Crea Logo' width='10%' align='right'> Contents
 
 - [Features](##Features)
 - [Installation](##Installation)
