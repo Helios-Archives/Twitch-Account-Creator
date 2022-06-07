@@ -18,7 +18,7 @@ from easygui import msgbox
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 os.chdir('..')
 
-# Creates file for alroady followed accounts
+# Creates file for already followed accounts
 if not os.path.exists(f'./users/{channel.split("/")[-1]}.txt'):
     with open(f'./users/{channel.split("/")[-1]}.txt', 'w') as f:
         f.write('')
