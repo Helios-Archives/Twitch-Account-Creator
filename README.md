@@ -1,7 +1,9 @@
 <img src='https://raw.githubusercontent.com/Rerum-Crea/.github/main/art/Headers/Logo-Header-TAT.png' alt='Art Header' width='100%' height='100%'>
 <br>
 
-A set of Twitch tools for functions like Creating accounts, Following Users, and more!
+# Add-Proxys Branch
+
+A set of Twitch tools for functions like Creating accounts, Following Users, View Boting, and more!
 
 
 
