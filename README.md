@@ -20,6 +20,7 @@ The current features are pretty simple and are only for the most basic use cases
 
 - [Create a Twitch account](###Create-a-Twitch-account)
 - [Follow a Twitch user](###Follow-a-Twitch-user)
+- [Mass view Twitch users](###Mass-view-Twitch-users)
 
 ### Create-a-Twitch-account
 
@@ -39,6 +40,7 @@ Pros:
 Cons:
 
 - Users need to complete captcha.
+- You need a good proxy list.
 
 ### Follow-a-Twitch-user
 
@@ -56,6 +58,23 @@ Pros:
 Cons:
 
 - Users need to complete captcha.
+
+### Mass-view-Twitch-users
+
+The third feature is to mass view Twitch users.
+This is done using selenium to pretend to be a user to view a user.
+
+This can be useful for mass viewing users in mass amounts.
+
+Pros:
+
+- Easy to use.
+- Can view users fast.
+- Uses proxies to view users.
+
+Cons:
+
+- You need a good proxy list.
 
 ## Installation
 
@@ -80,6 +99,7 @@ The files are in the modules folder.
 To set up the application, you need add information to the files below:
 
 - [__usernames.txt](__usernames.txt) - The usernames of the accounts to be created.
+- [__proxies.txt](__proxies.txt) - The proxies to use.
 
 
 Then run the following command to run the application:
@@ -106,6 +126,23 @@ Then run the following command to run the application:
 ```
 python TAF.py
 ```
+
+### TSV.py
+
+To set up the application, you need add information to the files below:
+
+- [TSV.py](./Modules/TSV.py) - You need to add the link to the choosen twitch channel in the channel variable at the top of the file.
+- [__proxies.txt](__proxies.txt) - The proxies to use.
+
+Then run the following command to run the application:
+
+```
+python TSV.py
+```
+
+Enter the amount of users you want to view. **Note:** A large number of users can cause lag.
+Enjoy.
+
 
 ## Contributing
 
