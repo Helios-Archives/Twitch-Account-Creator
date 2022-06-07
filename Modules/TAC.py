@@ -32,10 +32,39 @@ def generate_day():
 def generate_year():
     return random.randint(1970, 2001)
 
+def my_proxy(PROXY_HOST,PROXY_PORT):
+    fp = webdriver.FirefoxProfile()
+    # Direct = 0, Manual = 1, PAC = 2, AUTODETECT = 4, SYSTEM = 5
+    print(PROXY_PORT + ':' + PROXY_HOST)
+    fp.set_preference("network.proxy.type", 1)
+    fp.set_preference("network.proxy.http",PROXY_HOST)
+    fp.set_preference("network.proxy.http_port",int(PROXY_PORT))
+    fp.set_preference("general.useragent.override","whater_useragent")
+    fp.update_preferences()
+    return webdriver.Firefox(firefox_profile=fp, executable_path='./dep/geckodriver.exe')
+
+class get_proxy:
+    def lines(self):
+        with open('__proxys.txt', 'r') as f:
+            return f.readlines().__len__()
+    
+    def host(self):
+        with open('__proxys.txt', 'r') as f:
+            lines = f.readlines()
+            host = lines[self].strip()
+        return host.split(':')[0]
+    
+    def port(self):
+        with open('__proxys.txt', 'r') as f:
+            lines = f.readlines()
+            host = lines[self].strip()
+        return host.split(':')[1]
+
 
 while True:
     # Start firefox and install extensions
-    driver = webdriver.Firefox(executable_path='./dep/geckodriver.exe')
+    p_num = random.randint(1, get_proxy.lines(0))
+    driver = my_proxy(get_proxy.host(p_num),get_proxy.port(p_num))
     driver.install_addon("./dep/adblock.xpi")
 
     # Loads webpage
