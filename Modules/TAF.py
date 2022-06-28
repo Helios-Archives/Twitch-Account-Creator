@@ -9,7 +9,6 @@ channel = 'https://www.twitch.tv/rusty_o7'
 
 
 
-
 # # # Code Below # # #
 
 import os, sys
@@ -59,10 +58,23 @@ def follow(amt):
     driver.get(channel)
 
     # Clicks login button
-    driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/nav/div/div[3]/div[3]/div/div[1]/div[1]/button').click()
+    while True:
+        try:
+            driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/nav/div/div[3]/div[2]/div/div[1]/div[1]/button')
+            login_xpath = '/html/body/div[1]/div/div[2]/nav/div/div[3]/div[2]/div/div[1]/div[1]/button'
+            break
+        except:
+            try:
+                driver.find_element(By.XPATH, '/html/body/div[1]/div/div[2]/nav/div/div[3]/div[3]/div/div[1]/div[1]/button')
+                login_xpath = '/html/body/div[1]/div/div[2]/nav/div/div[3]/div[3]/div/div[1]/div[1]/button'
+                break
+            except:
+                sleep(1)
+    
+    driver.find_element(By.XPATH, login_xpath).click()
 
     # Sleeps
-    sleep(1)
+    sleep(2)
 
     # Does username and password.
     driver.find_element(By.ID, 'login-username').send_keys(info.split(':')[0])
