@@ -1,5 +1,5 @@
 # Set the link to the channel to be followed
-channel = 'https://www.twitch.tv/rusty_o7'
+channel = 'https://www.twitch.tv/quiltoce'
 
 
 
