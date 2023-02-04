@@ -59,7 +59,7 @@ while True:
     # Does username and password.
     driver.find_element(By.ID, 'signup-username').send_keys(username)
     driver.find_element(By.ID, 'password-input').send_keys(password)
-    driver.find_element(By.XPATH, '//*[@id="password-input-confirmation"]').send_keys(password)
+    driver.find_element(By.XPATH, "//*[text()='Next Step']").click()
 
     # Does month of birth.
     select = Select(driver.find_element(By.XPATH, '/html/body/div[3]/div/div/div/div/div/div[1]/div/div/div[3]/form/div/div[3]/div/div[2]/div[1]/select'))
