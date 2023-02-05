@@ -1,2 +1,3 @@
 selenium==4.1.5
 easygui==0.98.3
+random-username==1.0.2
