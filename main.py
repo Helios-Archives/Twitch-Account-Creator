@@ -1,20 +1,19 @@
 import os
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from webdriver_manager.firefox import GeckoDriverManager
-from selenium.webdriver.common.keys import Keys
-from random_username.generate import generate_username
-import requests
 import random
-from time import sleep
-from selenium.webdriver.support.ui import Select
 import string
-from fake_useragent import UserAgent
-from selenium.webdriver.common.action_chains import ActionChains
+from time import sleep
 
-from selenium.webdriver.support.ui import WebDriverWait
+import requests
+from fake_useragent import UserAgent
+from random_username.generate import generate_username
+from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.expected_conditions import staleness_of
+from selenium.webdriver.support.ui import Select, WebDriverWait
+from webdriver_manager.firefox import GeckoDriverManager
 
 
 def check_name(username):
