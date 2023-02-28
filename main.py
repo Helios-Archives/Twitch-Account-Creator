@@ -14,25 +14,9 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.expected_conditions import staleness_of
-
-def check_name(username):
-    r = requests.head("https://passport.twitch.tv/usernames/" + username,
-                      headers={'Connection':'close'})
-    
-    if r.status_code == 403:
-        success = False
-        while success == False:
-            r = requests.head("https://passport.twitch.tv/usernames/" + username,
-                              headers={'Connection':'close'})
-            if r.status_code != 403:
-                success = True
-    
-    if r.status_code == 200:
-        return {'username': username, 'taken': True, 'status_code': r.status_code}
-    else:
-        return {'username': username, 'taken': False, 'status_code': r.status_code}
-
 import os
+
+# Makes sure the program is running in the correct directory.
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 
