@@ -25,6 +25,7 @@ def start():
     # Start firefox and install extensions
     profile = webdriver.FirefoxProfile()
     profile.set_preference("general.useragent.override", 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36')
+    profile.set_preference("intl.accept_languages", "en-US")
     driver = webdriver.Firefox(firefox_profile=profile, executable_path=GeckoDriverManager().install())
     # driver.get("http://www.whatsmyua.info/")
     driver.install_addon("adblock.xpi")
