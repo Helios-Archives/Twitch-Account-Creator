@@ -1,4 +1,4 @@
-# Twitch Account Toolbox 
+# Twitch Account Toolbox NEED FIREFOX
 ## Make sure to star the project to get updates on fixes if the project is not currently working as twitch is constantly changing their website and abot detection systems.
 <br>
 
