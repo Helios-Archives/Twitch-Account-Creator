@@ -135,7 +135,7 @@ def Sign_up_s3():
 
 def Store_info():
     with open("z_infolist.txt", "a") as f:
-        f.write(f"/{username}:{password}:{month}/{day}/{year}")
+        f.write(f"/NEW ACCCOUNT: username: {username} password: {password} birthday: {month}/{day}/{year}")
 
 
 start()
