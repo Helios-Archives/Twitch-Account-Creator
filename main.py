@@ -1,6 +1,10 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from webdriver_manager.firefox import GeckoDriverManager
+
+from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.firefox.service import Service as FirefoxService
+
 from selenium.webdriver.common.keys import Keys
 from random_username.generate import generate_username
 import requests
@@ -23,14 +27,28 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 def start():
     global driver
     # Start firefox and install extensions
-    profile = webdriver.FirefoxProfile()
-    profile.set_preference("general.useragent.override", 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36')
-    profile.set_preference("intl.accept_languages", "en-US")
-    driver = webdriver.Firefox(firefox_profile=profile, executable_path=GeckoDriverManager().install())
-    # driver.get("http://www.whatsmyua.info/")
+
+    # Old Deprecated WebDriver for Firefox
+    ### profile = webdriver.FirefoxProfile()
+    ### profile.set_preference(general.useragent.override", 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36')
+    ### profile.set_preference("intl.accept_languages", "en-US")
+    ### driver = webdriver.Firefox(firefox_profile=profile, executable_path=GeckoDriverManager().install())
+
+
+    firefox_profile = Options();
+    firefox_profile.set_preference("general.useragent.override", 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36')
+    firefox_profile.set_preference("intl.accept_languages", "en-US")
+    firefox_profile.set_preference('permissions.default.stylesheet', 2)
+    firefox_profile.set_preference('permissions.default.image', 2)
+    
+    option = webdriver.FirefoxOptions()
+    driver = webdriver.Firefox(options=firefox_profile)
+
+
     driver.install_addon("adblock.xpi")
 
     # Loads webpage
+    # driver.get("http://www.whatsmyua.info/")
     driver.get("http://www.twitch.tv/")
 
 
@@ -93,7 +111,10 @@ def Sign_up_s2():
     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//*[text()[contains(.,'Use email instead')]]"))).click()
 
     # find the email field and enter an email
-    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, "email-input"))).send_keys(username + "@gmail.com")
+    # WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, "email-input"))).send_keys(username + "@gmail.com")
+
+    # find the email field and enter an email
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, "email-input"))).send_keys(username + "@txcct.com")
 
     # click next
     WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, "//*[text()[contains(.,'Next Step')]]"))).click()
@@ -143,4 +164,3 @@ Sign_up_s1()
 Sign_up_s2()
 Sign_up_s3()
 Store_info()
-
